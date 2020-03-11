@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
+        "projectName": "demo-is4-auth",
+        "projectPath": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
+        "packagesPath": "C:\\Users\\tendai.mzondo\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\tendai.mzondo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://build1-cpt/nuget/gbo-v2/package": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
