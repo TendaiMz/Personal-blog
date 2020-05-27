@@ -5,15 +5,13 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
 namespace Blog.Service.Controllers
-{   
+{
     [Produces(MediaTypeNames.Application.Json)]
-    public class BlogPostsController:BaseController 
+    public class BlogPostsController : BaseController
     {
 
         private readonly IMediator mediator;
@@ -43,7 +41,7 @@ namespace Blog.Service.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-       //Q [MapToApiVersion("1.0")]
+        //Q [MapToApiVersion("1.0")]
         public async Task<IActionResult> Post([FromBody] BlogPostDto blogPostDto)
         {
             var command = new CreatePostCommand()

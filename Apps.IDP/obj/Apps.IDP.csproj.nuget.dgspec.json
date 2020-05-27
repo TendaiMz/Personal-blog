@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\blog\\Apps.IDP\\Apps.IDP.csproj": {}
+    "C:\\dev\\Personal-blog\\Apps.IDP\\Apps.IDP.csproj": {}
   },
   "projects": {
-    "C:\\dev\\blog\\Apps.IDP\\Apps.IDP.csproj": {
+    "C:\\dev\\Personal-blog\\Apps.IDP\\Apps.IDP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\blog\\Apps.IDP\\Apps.IDP.csproj",
+        "projectUniqueName": "C:\\dev\\Personal-blog\\Apps.IDP\\Apps.IDP.csproj",
         "projectName": "Apps.IDP",
-        "projectPath": "C:\\dev\\blog\\Apps.IDP\\Apps.IDP.csproj",
+        "projectPath": "C:\\dev\\Personal-blog\\Apps.IDP\\Apps.IDP.csproj",
         "packagesPath": "C:\\Users\\tendai.mzondo\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\blog\\Apps.IDP\\obj\\",
+        "outputPath": "C:\\dev\\Personal-blog\\Apps.IDP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

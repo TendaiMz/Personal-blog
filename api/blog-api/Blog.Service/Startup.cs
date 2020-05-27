@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using Blog.Service.Domain.Repository;
 using Blog.Service.Domain.Validation;
 using Blog.Service.Exceptions;
@@ -14,12 +9,14 @@ using Hellang.Middleware.ProblemDetails;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Reflection;
 
 namespace Blog.Service
 {
@@ -27,26 +24,34 @@ namespace Blog.Service
     {
         private readonly IConfiguration Configuration;
         private readonly SwaggerOptions swaggerOptions;
-        public Startup(IConfiguration configuration )
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            swaggerOptions= Configuration.GetSection("SwaggerOptions").Get<SwaggerOptions>();
+            swaggerOptions = Configuration.GetSection("SwaggerOptions").Get<SwaggerOptions>();
         }
-       
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();        
-            services.AddSwaggerGen(c=>c.SwaggerDoc(swaggerOptions.SwaggerDocName, new OpenApiInfo
+            services.AddApiVersioning(cfg =>
+            {
+                cfg.DefaultApiVersion = new ApiVersion(1, 0);
+                cfg.AssumeDefaultVersionWhenUnspecified = true;
+                cfg.ReportApiVersions = true;
+                cfg.ApiVersionReader = ApiVersionReader.Combine(new HeaderApiVersionReader("X-Version"), new QueryStringApiVersionReader("v"));
+            });
+
+            services.AddControllers();
+            services.AddSwaggerGen(c => c.SwaggerDoc(swaggerOptions.SwaggerDocName, new OpenApiInfo
             {
                 Title = swaggerOptions.Title,
-                Version =swaggerOptions.Version,
-                Description = swaggerOptions.Description,              
+                Version = swaggerOptions.Version,
+                Description = swaggerOptions.Description,
                 Contact = new OpenApiContact
                 {
                     Name = swaggerOptions.Contact.Name,
-                    Email = swaggerOptions.Contact.Email,                    
+                    Email = swaggerOptions.Contact.Email,
                 }
             }));
 
@@ -65,7 +70,7 @@ namespace Blog.Service
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {           
+        {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,7 +81,7 @@ namespace Blog.Service
                 c.SwaggerEndpoint(swaggerOptions.SwaggerEndPoint, swaggerOptions.EndPointName);
             });
             app.UseSerilogRequestLogging();
-            app.UseRouting();           
+            app.UseRouting();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }

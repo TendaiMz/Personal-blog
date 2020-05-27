@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {}
+    "C:\\dev\\Personal-blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {}
   },
   "projects": {
-    "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {
+    "C:\\dev\\Personal-blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
+        "projectUniqueName": "C:\\dev\\Personal-blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
         "projectName": "demo-is4-auth",
-        "projectPath": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
+        "projectPath": "C:\\dev\\Personal-blog\\api\\blog-api\\demo-is4-auth\\demo-is4-auth.csproj",
         "packagesPath": "C:\\Users\\tendai.mzondo\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\blog\\api\\blog-api\\demo-is4-auth\\obj\\",
+        "outputPath": "C:\\dev\\Personal-blog\\api\\blog-api\\demo-is4-auth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

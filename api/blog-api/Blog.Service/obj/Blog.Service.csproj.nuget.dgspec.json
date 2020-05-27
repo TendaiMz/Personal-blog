@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj": {}
+    "C:\\dev\\Personal-blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj": {}
   },
   "projects": {
-    "C:\\dev\\blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj": {
+    "C:\\dev\\Personal-blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj",
+        "projectUniqueName": "C:\\dev\\Personal-blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj",
         "projectName": "Blog.Service",
-        "projectPath": "C:\\dev\\blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj",
+        "projectPath": "C:\\dev\\Personal-blog\\api\\blog-api\\Blog.Service\\Blog.Service.csproj",
         "packagesPath": "C:\\Users\\tendai.mzondo\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\blog\\api\\blog-api\\Blog.Service\\obj\\",
+        "outputPath": "C:\\dev\\Personal-blog\\api\\blog-api\\Blog.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,6 +61,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[4.1.1, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
